@@ -30,7 +30,7 @@ app.get('/apps', (req, res) => {
                 .filter(googleApp => 
                     googleApp
                         .Genres
-                        .inlcudes(genres)
+                        .includes(genres)
                 )
         }
     }
@@ -45,6 +45,4 @@ app.get('/apps', (req, res) => {
     res.json(results)
 })
 
-app.listen(8001, () => {
-    console.log('Server started on PORT 8001, bitches!')
-})
+module.exports = app
